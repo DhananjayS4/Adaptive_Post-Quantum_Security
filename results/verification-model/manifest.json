@@ -1,0 +1,14 @@
+{
+  "algorithm": "sha256",
+  "artifact_format_version": 1,
+  "files": {
+    "metadata.json": {
+      "sha256": "888f1de20292ea12c92a60f9b504dc7ee18f0be261e5ec97f78cb766881b8117",
+      "size": 5845
+    },
+    "model.joblib": {
+      "sha256": "0d8061f70a79ca1790bdb2c97ef424bc3ce57b2b5abacd40a7583e0651017eb9",
+      "size": 20953
+    }
+  }
+}

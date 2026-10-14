@@ -1,0 +1,28 @@
+dataset:
+  edge_iiot_ml: "../Edge-IIoTset Cyber Security Dataset of IoT & IIoT/Edge-IIoTset dataset/Selected dataset for ML and DL/ML-EdgeIIoT-dataset.csv"
+  edge_iiot_dnn: "../Edge-IIoTset Cyber Security Dataset of IoT & IIoT/Edge-IIoTset dataset/Selected dataset for ML and DL/DNN-EdgeIIoT-dataset.csv"
+  veremi: "../Veremi_final_dataset.csv"
+  default_adapter: edge_iiot
+  task: binary
+  random_state: 42
+  max_rows: 200000
+
+model:
+  max_depth: 8
+  learning_rate: 0.05
+  max_iter: 200
+  min_samples_leaf: 20
+  l2_regularization: 0.1
+
+runtime:
+  pqc_mode: pqc_preferred
+  central_alert_threshold: 0.65
+  replay_window: 1024
+  session_ttl_seconds: 3600
+
+simulation:
+  seed: 42
+  messages: 100
+  packet_loss: 0.0
+  tamper_probability: 0.0
+  base_latency_ms: 2.0

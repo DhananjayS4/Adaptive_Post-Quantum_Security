@@ -1,0 +1,390 @@
+{
+  "class_counts": {
+    "0": 297,
+    "1": 1703
+  },
+  "command": "audit-data",
+  "dataset": "edge-iiot",
+  "features": 61,
+  "metadata": {
+    "adapter": "EdgeIIoTAdapter",
+    "random_state": 42,
+    "rows_loaded": 2000,
+    "rows_seen": 157800,
+    "sampled": true,
+    "source": "D:\\Freelancing\\Edge-IIoTset Cyber Security Dataset of IoT & IIoT\\Edge-IIoTset dataset\\Selected dataset for ML and DL\\ML-EdgeIIoT-dataset.csv"
+  },
+  "rows": 2000,
+  "sample_bound": 2000,
+  "schema": [
+    {
+      "dtype": "str",
+      "missing": 0,
+      "name": "frame.time",
+      "unique": 1969
+    },
+    {
+      "dtype": "str",
+      "missing": 0,
+      "name": "ip.src_host",
+      "unique": 255
+    },
+    {
+      "dtype": "str",
+      "missing": 0,
+      "name": "ip.dst_host",
+      "unique": 105
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "arp.dst.proto_ipv4",
+      "unique": 6
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "arp.opcode",
+      "unique": 3
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "arp.hw.size",
+      "unique": 2
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "arp.src.proto_ipv4",
+      "unique": 6
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "icmp.checksum",
+      "unique": 180
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "icmp.seq_le",
+      "unique": 196
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "icmp.transmit_timestamp",
+      "unique": 1
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "icmp.unused",
+      "unique": 1
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "http.file_data",
+      "unique": 16
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "http.content_length",
+      "unique": 12
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "http.request.uri.query",
+      "unique": 45
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "http.request.method",
+      "unique": 6
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "http.referer",
+      "unique": 4
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "http.request.full_uri",
+      "unique": 77
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "http.request.version",
+      "unique": 6
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "http.response",
+      "unique": 2
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "http.tls_port",
+      "unique": 1
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "tcp.ack",
+      "unique": 513
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "tcp.ack_raw",
+      "unique": 1298
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "tcp.checksum",
+      "unique": 1547
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "tcp.connection.fin",
+      "unique": 2
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "tcp.connection.rst",
+      "unique": 2
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "tcp.connection.syn",
+      "unique": 2
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "tcp.connection.synack",
+      "unique": 2
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "tcp.dstport",
+      "unique": 590
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "tcp.flags",
+      "unique": 9
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "tcp.flags.ack",
+      "unique": 2
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "tcp.len",
+      "unique": 128
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "tcp.options",
+      "unique": 998
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "tcp.payload",
+      "unique": 372
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "tcp.seq",
+      "unique": 372
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "tcp.srcport",
+      "unique": 895
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "udp.port",
+      "unique": 5
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "udp.stream",
+      "unique": 207
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "udp.time_delta",
+      "unique": 4
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "dns.qry.name",
+      "unique": 23
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "dns.qry.name.len",
+      "unique": 5
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "dns.qry.qu",
+      "unique": 4
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "dns.qry.type",
+      "unique": 1
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "dns.retransmission",
+      "unique": 2
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "dns.retransmit_request",
+      "unique": 1
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "dns.retransmit_request_in",
+      "unique": 1
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "mqtt.conack.flags",
+      "unique": 4
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "mqtt.conflag.cleansess",
+      "unique": 2
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "mqtt.conflags",
+      "unique": 2
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "mqtt.hdrflags",
+      "unique": 5
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "mqtt.len",
+      "unique": 4
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "mqtt.msg_decoded_as",
+      "unique": 1
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "mqtt.msg",
+      "unique": 19
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "mqtt.msgtype",
+      "unique": 5
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "mqtt.proto_len",
+      "unique": 2
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "mqtt.protoname",
+      "unique": 4
+    },
+    {
+      "dtype": "object",
+      "missing": 0,
+      "name": "mqtt.topic",
+      "unique": 4
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "mqtt.topic_len",
+      "unique": 2
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "mqtt.ver",
+      "unique": 2
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "mbtcp.len",
+      "unique": 1
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "mbtcp.trans_id",
+      "unique": 1
+    },
+    {
+      "dtype": "float64",
+      "missing": 0,
+      "name": "mbtcp.unit_id",
+      "unique": 1
+    }
+  ],
+  "source": "D:\\Freelancing\\Edge-IIoTset Cyber Security Dataset of IoT & IIoT\\Edge-IIoTset dataset\\Selected dataset for ML and DL\\ML-EdgeIIoT-dataset.csv",
+  "target_column": "Attack_label",
+  "task": "binary"
+}

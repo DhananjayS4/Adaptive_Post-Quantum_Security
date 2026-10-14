@@ -1,0 +1,71 @@
+version: "1.0"
+
+risk_weights:
+  threat: 0.40
+  data: 0.20
+  location: 0.15
+  interface: 0.10
+  resources: 0.05
+  latency: 0.05
+  density: 0.05
+
+thresholds:
+  elevated: 0.35
+  high: 0.65
+  critical: 0.85
+  quarantine_attack_probability: 0.98
+
+data_scores:
+  public: 0.10
+  internal: 0.35
+  sensitive: 0.70
+  safety_critical: 1.00
+
+location_scores:
+  trusted_internal: 0.05
+  trusted_external: 0.30
+  public_road: 0.55
+  restricted: 0.85
+  unknown: 0.90
+
+interface_scores:
+  internal_bus: 0.05
+  wifi: 0.70
+  bluetooth: 0.75
+  ota: 0.95
+  v2x: 0.80
+  unknown: 0.90
+
+security_floors:
+  data:
+    public: 0
+    internal: 1
+    sensitive: 2
+    safety_critical: 3
+  interface:
+    internal_bus: 0
+    wifi: 2
+    bluetooth: 2
+    ota: 3
+    v2x: 2
+    unknown: 2
+
+profiles:
+  - id: baseline
+    level: 0
+    aead: AES-256-GCM
+    pqc_mode: classical_only
+  - id: authenticated
+    level: 1
+    aead: AES-256-GCM
+    pqc_mode: classical_only
+  - id: hybrid
+    level: 2
+    aead: AES-256-GCM
+    pqc_mode: pqc_preferred
+  - id: restricted
+    level: 3
+    aead: AES-256-GCM
+    pqc_mode: pqc_required
+
+hysteresis_margin: 0.05

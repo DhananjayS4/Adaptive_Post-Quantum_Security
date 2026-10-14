@@ -1,0 +1,181 @@
+{
+  "accepted_deliveries": 114,
+  "actions": {
+    "alert_central": 32,
+    "protect_and_forward": 114,
+    "quarantine": 835
+  },
+  "adaptive_vs_send_all": {
+    "adaptive": {
+      "alerts": 867,
+      "bytes": 136304,
+      "messages": 584,
+      "summaries": 0,
+      "unavailable": 283
+    },
+    "reduction": {
+      "bytes": 0.9107398486747581,
+      "messages": 0.4046890927624872
+    },
+    "send_all": {
+      "bytes": 1527042,
+      "messages": 981
+    }
+  },
+  "central_outage": {
+    "start": 327,
+    "stop": 654
+  },
+  "command": "demo",
+  "data_aware_policy": {
+    "internal": {
+      "profiles": {
+        "hybrid": 245
+      },
+      "records": 245,
+      "risk": {
+        "max": 0.661837,
+        "mean": 0.5804035918367347,
+        "min": 0.208315
+      },
+      "security_floors": {
+        "2": 245
+      }
+    },
+    "public": {
+      "profiles": {
+        "authenticated": 203,
+        "baseline": 43
+      },
+      "records": 246,
+      "risk": {
+        "max": 0.503787,
+        "mean": 0.4066870853658537,
+        "min": 0.053565
+      },
+      "security_floors": {
+        "0": 246
+      }
+    },
+    "safety_critical": {
+      "profiles": {
+        "restricted": 245
+      },
+      "records": 245,
+      "risk": {
+        "max": 0.878237,
+        "mean": 0.7996394285714287,
+        "min": 0.425915
+      },
+      "security_floors": {
+        "3": 245
+      }
+    },
+    "sensitive": {
+      "profiles": {
+        "hybrid": 245
+      },
+      "records": 245,
+      "risk": {
+        "max": 0.764887,
+        "mean": 0.6745650612244898,
+        "min": 0.313665
+      },
+      "security_floors": {
+        "2": 245
+      }
+    }
+  },
+  "dataset": "edge-iiot",
+  "ecus": [
+    "ecu-powertrain",
+    "ecu-gateway"
+  ],
+  "fail_closed": {
+    "count": 32,
+    "errors": {
+      "PQCUnavailableError: liboqs native library was not found": 32
+    }
+  },
+  "location_aware_policy": {
+    "public_road": {
+      "profiles": {
+        "hybrid": 245
+      },
+      "records": 245,
+      "risk": {
+        "max": 0.764887,
+        "mean": 0.6745650612244898,
+        "min": 0.313665
+      },
+      "security_floors": {
+        "2": 245
+      }
+    },
+    "restricted": {
+      "profiles": {
+        "restricted": 245
+      },
+      "records": 245,
+      "risk": {
+        "max": 0.878237,
+        "mean": 0.7996394285714287,
+        "min": 0.425915
+      },
+      "security_floors": {
+        "3": 245
+      }
+    },
+    "trusted_external": {
+      "profiles": {
+        "hybrid": 245
+      },
+      "records": 245,
+      "risk": {
+        "max": 0.661837,
+        "mean": 0.5804035918367347,
+        "min": 0.208315
+      },
+      "security_floors": {
+        "2": 245
+      }
+    },
+    "trusted_internal": {
+      "profiles": {
+        "authenticated": 203,
+        "baseline": 43
+      },
+      "records": 246,
+      "risk": {
+        "max": 0.503787,
+        "mean": 0.4066870853658537,
+        "min": 0.053565
+      },
+      "security_floors": {
+        "0": 246
+      }
+    }
+  },
+  "model_version": "20261014T141259Z",
+  "peer_processing_during_outage": {
+    "accepted_deliveries": 44,
+    "local_decisions": 327,
+    "protected_sends": 44
+  },
+  "pqc": {
+    "available": false,
+    "kem_algorithm": "ML-KEM-768",
+    "reason": "liboqs native library was not found",
+    "signature_algorithm": "ML-DSA-65",
+    "synthetic_pqc_used": false
+  },
+  "profiles": {
+    "authenticated": 203,
+    "baseline": 43,
+    "hybrid": 490,
+    "restricted": 245
+  },
+  "records_replayed": 981,
+  "sent": 114,
+  "source": "D:\\Freelancing\\Edge-IIoTset Cyber Security Dataset of IoT & IIoT\\Edge-IIoTset dataset\\Selected dataset for ML and DL\\ML-EdgeIIoT-dataset.csv"
+}

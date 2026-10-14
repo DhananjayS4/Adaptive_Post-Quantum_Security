@@ -1,0 +1,258 @@
+{
+  "artifact_format_version": 1,
+  "calibrated": false,
+  "classes": [
+    0.0,
+    1.0
+  ],
+  "feature_schema": {
+    "features": [
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "arp.opcode"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "arp.hw.size"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "icmp.checksum"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "icmp.seq_le"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "icmp.unused"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "http.content_length"
+      },
+      {
+        "dtype": "str",
+        "kind": "categorical",
+        "name": "http.request.method"
+      },
+      {
+        "dtype": "str",
+        "kind": "categorical",
+        "name": "http.referer"
+      },
+      {
+        "dtype": "str",
+        "kind": "categorical",
+        "name": "http.request.version"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "http.response"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "http.tls_port"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "tcp.ack"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "tcp.ack_raw"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "tcp.checksum"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "tcp.connection.fin"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "tcp.connection.rst"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "tcp.connection.syn"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "tcp.connection.synack"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "tcp.flags"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "tcp.flags.ack"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "tcp.len"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "tcp.seq"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "udp.stream"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "udp.time_delta"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "dns.qry.name"
+      },
+      {
+        "dtype": "str",
+        "kind": "categorical",
+        "name": "dns.qry.name.len"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "dns.qry.qu"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "dns.qry.type"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "dns.retransmission"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "dns.retransmit_request"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "dns.retransmit_request_in"
+      },
+      {
+        "dtype": "str",
+        "kind": "categorical",
+        "name": "mqtt.conack.flags"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "mqtt.conflag.cleansess"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "mqtt.conflags"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "mqtt.hdrflags"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "mqtt.len"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "mqtt.msg_decoded_as"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "mqtt.msgtype"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "mqtt.proto_len"
+      },
+      {
+        "dtype": "str",
+        "kind": "categorical",
+        "name": "mqtt.protoname"
+      },
+      {
+        "dtype": "str",
+        "kind": "categorical",
+        "name": "mqtt.topic"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "mqtt.topic_len"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "mqtt.ver"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "mbtcp.len"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "mbtcp.trans_id"
+      },
+      {
+        "dtype": "float64",
+        "kind": "numeric",
+        "name": "mbtcp.unit_id"
+      }
+    ]
+  },
+  "model_metadata": {
+    "calibration": "not_calibrated",
+    "calibration_cv": null,
+    "dataset": "edge-iiot",
+    "dataset_source": "D:\\Freelancing\\Edge-IIoTset Cyber Security Dataset of IoT & IIoT\\Edge-IIoTset dataset\\Selected dataset for ML and DL\\ML-EdgeIIoT-dataset.csv",
+    "dataset_task": "binary",
+    "model_type": "HistGradientBoostingClassifier",
+    "random_state": 42,
+    "sample_bound": 5000,
+    "target_column": "Attack_label",
+    "trained_at": "2026-10-14T13:46:48.779503+00:00",
+    "training_rows": 3414
+  },
+  "model_version": "20261014T134648Z",
+  "positive_label": 1.0,
+  "task": "binary"
+}

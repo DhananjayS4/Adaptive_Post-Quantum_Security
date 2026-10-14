@@ -1,0 +1,116 @@
+{
+  "ab_update": {
+    "active_slot_after_scenarios": "B",
+    "audit_log": [
+      "SIMULATED: A/B slots, activation, rollback, and boot state are software models and provide no hardware security guarantee.",
+      "staged firmware 2.0.0 in B",
+      "activated firmware 2.0.0 from B",
+      "staged firmware 3.0.0 in A",
+      "rolled back 3.0.0: post-activation health check failed"
+    ],
+    "rollback_scenario": {
+      "activated": false,
+      "active_slot": "B",
+      "reason": "post-activation health check failed",
+      "rolled_back": true,
+      "simulation_notice": "SIMULATED: A/B slots, activation, rollback, and boot state are software models and provide no hardware security guarantee.",
+      "version": "2.0.0"
+    },
+    "successful_update": {
+      "activated": true,
+      "active_slot": "B",
+      "reason": null,
+      "rolled_back": false,
+      "simulation_notice": "SIMULATED: A/B slots, activation, rollback, and boot state are software models and provide no hardware security guarantee.",
+      "version": "2.0.0"
+    }
+  },
+  "command": "ota-demo",
+  "manifests": {
+    "firmware": {
+      "manifest": {
+        "artifact_type": "firmware",
+        "expires_at": "2026-10-15T13:47:15.708141Z",
+        "metadata": {
+          "simulation": true,
+          "slot_strategy": "A/B"
+        },
+        "schema": "adaptive-v2x-update-manifest-v1",
+        "sha256": "b0f047961cc6d9bb9e2206e9481f457bc8561d6c97e52ce4110503ca03158f7b",
+        "size": 27,
+        "target": "ecu-gateway",
+        "version": "2.0.0"
+      },
+      "signature_algorithms": [
+        "Ed25519"
+      ],
+      "signature_sha256": {
+        "Ed25519": "6c9d0aaf9bc441e0e418d09e123889c8a1467394c69ebf4586840b3cb641773d"
+      }
+    },
+    "model": {
+      "manifest": {
+        "artifact_type": "model",
+        "expires_at": "2026-10-15T13:47:15.708141Z",
+        "metadata": {
+          "source": "D:\\Freelancing\\adaptive_v2x_security\\results\\verification-model"
+        },
+        "schema": "adaptive-v2x-update-manifest-v1",
+        "sha256": "fd5c8f6ed6def9bb9fcdd2c4ef140f8507963acff077a6cdd42f0225cbed5571",
+        "size": 27481,
+        "target": "ecu-gateway",
+        "version": "2.0.0"
+      },
+      "signature_algorithms": [
+        "Ed25519"
+      ],
+      "signature_sha256": {
+        "Ed25519": "a02e23ee1672659b93e4da7c3ba759c94f7014a4584cc3a539b67f358934f5fd"
+      }
+    },
+    "rollback_candidate": {
+      "manifest": {
+        "artifact_type": "firmware",
+        "expires_at": "2026-10-15T13:47:15.708141Z",
+        "metadata": {
+          "expected_health": "fail",
+          "simulation": true
+        },
+        "schema": "adaptive-v2x-update-manifest-v1",
+        "sha256": "30b09790591c40f5bede38d7174035714ecf86e2f4af948154f22a046ab46364",
+        "size": 37,
+        "target": "ecu-gateway",
+        "version": "3.0.0"
+      },
+      "signature_algorithms": [
+        "Ed25519"
+      ],
+      "signature_sha256": {
+        "Ed25519": "5758fed30b1e57eca7521a7f4ba8fb633b67ba7eb92c9e66dd6aa7ce153133e8"
+      }
+    }
+  },
+  "pqc": {
+    "available": false,
+    "kem_algorithm": "ML-KEM-768",
+    "manifest_pqc_signatures_used": false,
+    "reason": "liboqs native library was not found",
+    "signature_algorithm": "ML-DSA-65",
+    "synthetic_pqc_used": false
+  },
+  "secure_boot": {
+    "allowed": true,
+    "errors": [],
+    "simulation_notice": "SIMULATED: manifest verification models a secure-boot decision, but keys and measurements are not anchored in TPM, HSM, ROM, or other hardware.",
+    "verified_components": [
+      "firmware",
+      "model"
+    ]
+  },
+  "simulation_scope": {
+    "firmware_images": "generated demo bytes",
+    "hardware_root_of_trust": false,
+    "model_image_source": "D:\\Freelancing\\adaptive_v2x_security\\results\\verification-model"
+  },
+  "target": "ecu-gateway"
+}

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive-v2x-security"
+version = "0.1.0"
+description = "Research prototype for AI-driven adaptive edge security in V2X systems"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Research use only" }
+dependencies = [
+    "cbor2>=5.6,<6",
+    "cryptography>=43,<48",
+    "joblib>=1.4,<2",
+    "numpy>=2.0,<3",
+    "pandas>=2.2,<4",
+    "psutil>=6,<8",
+    "PyYAML>=6,<7",
+    "scikit-learn>=1.5,<2",
+]
+
+[project.optional-dependencies]
+pqc = ["liboqs-python>=0.12"]
+test = ["pytest>=8,<10", "pytest-cov>=5,<8"]
+
+[project.scripts]
+adaptive-v2x = "adaptive_v2x_security.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["adaptive_v2x_security"]
+branch = true

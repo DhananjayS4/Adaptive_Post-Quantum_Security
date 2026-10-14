@@ -1,0 +1,85 @@
+{
+  "central_workload": {
+    "adaptive": {
+      "alerts": 8,
+      "bytes": 1648,
+      "messages": 8,
+      "summaries": 0,
+      "unavailable": 0
+    },
+    "reduction": {
+      "bytes": 0.3532182103610675,
+      "messages": 0.19999999999999996
+    },
+    "send_all": {
+      "bytes": 2548,
+      "messages": 10
+    }
+  },
+  "command": "benchmark",
+  "dataset": "edge-iiot",
+  "iterations": 10,
+  "latency": {
+    "inference_ms": {
+      "median": 33.10455,
+      "p95": 37.506795,
+      "p99": 37.926159,
+      "samples": 10
+    },
+    "policy_ms": {
+      "median": 0.0142,
+      "p95": 0.03584999999999998,
+      "p99": 0.04197,
+      "samples": 10
+    },
+    "security_classical": {
+      "key_exchange": "X25519",
+      "mode_requested": "classical_only",
+      "mode_status": "disabled",
+      "open_ms": {
+        "median": 0.20045000000000002,
+        "p95": 0.234465,
+        "p99": 0.236013,
+        "samples": 10
+      },
+      "plaintext_bytes": 256,
+      "protect_ms": {
+        "median": 0.1023,
+        "p95": 0.25516499999999975,
+        "p99": 0.35103300000000004,
+        "samples": 10
+      },
+      "protected_packet_bytes": {
+        "median": 671.0,
+        "p95": 671.0,
+        "p99": 671.0,
+        "samples": 10
+      },
+      "session_establishment_ms": {
+        "median": 0.20015,
+        "p95": 0.49972499999999953,
+        "p99": 0.664425,
+        "samples": 10
+      },
+      "signature": "Ed25519"
+    },
+    "security_pqc": null
+  },
+  "latency_units": "milliseconds",
+  "model_version": "20261014T134648Z",
+  "pqc": {
+    "available": false,
+    "kem_algorithm": "ML-KEM-768",
+    "measured": false,
+    "reason": "liboqs native library was not found",
+    "signature_algorithm": "ML-DSA-65",
+    "synthetic_pqc_used": false
+  },
+  "resource_usage": {
+    "process_cpu_seconds": 3.484375,
+    "process_rss_delta_bytes": -53907456,
+    "process_rss_end_bytes": 224264192,
+    "process_rss_start_bytes": 278171648
+  },
+  "source": "D:\\Freelancing\\Edge-IIoTset Cyber Security Dataset of IoT & IIoT\\Edge-IIoTset dataset\\Selected dataset for ML and DL\\ML-EdgeIIoT-dataset.csv"
+}
