@@ -12,20 +12,25 @@ license = { text = "Research use only" }
 dependencies = [
     "cbor2>=5.6,<6",
     "cryptography>=43,<48",
+    "fastapi>=0.115,<1",
     "joblib>=1.4,<2",
     "numpy>=2.0,<3",
     "pandas>=2.2,<4",
     "psutil>=6,<8",
     "PyYAML>=6,<7",
     "scikit-learn>=1.5,<2",
+    "streamlit>=1.50,<2",
+    "uvicorn>=0.34,<1",
 ]
 
 [project.optional-dependencies]
 pqc = ["liboqs-python>=0.12"]
-test = ["pytest>=8,<10", "pytest-cov>=5,<8"]
+test = ["httpx>=0.27,<1", "pytest>=8,<10", "pytest-cov>=5,<8"]
 
 [project.scripts]
 adaptive-v2x = "adaptive_v2x_security.cli:main"
+adaptive-v2x-console = "adaptive_v2x_security.api.launcher:main"
+adaptive-v2x-ui = "adaptive_v2x_security.ui.launcher:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

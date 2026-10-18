@@ -67,11 +67,44 @@ adaptive-v2x benchmark --artifact-dir results/model --iterations 100
 # Verify signed boot components and exercise A/B update + rollback
 adaptive-v2x ota-demo --artifact-dir results/model
 
+# Launch the monitoring console (API + compiled React UI)
+adaptive-v2x-console
+
 # Run automated verification
 python -m pytest
 ```
 
 Outputs are written as strict JSON under `results/`.
+
+## Monitoring console
+
+The primary interface is a React/TypeScript operations console backed by
+FastAPI. It opens at `http://127.0.0.1:8000` and provides:
+
+- System telemetry for model quality, edge workload, latency, and PQC status.
+- Interactive context-aware policy evaluation.
+- Authenticated AES-GCM or ChaCha20-Poly1305 session verification.
+- Bounded, single-flight experiment execution with durable job records.
+- Signed secure-boot, A/B activation, health-check, and rollback evidence.
+
+Build the web application once before launching:
+
+```powershell
+cd frontend
+npm install
+npm run build
+cd ..
+adaptive-v2x-console
+```
+
+For frontend development, run `npm run dev` in `frontend/` while
+`adaptive-v2x-console --reload` runs in a second terminal. Vite proxies `/api`
+to FastAPI.
+
+API documentation is available at `http://127.0.0.1:8000/api/docs`. All API
+responses redact exact locations, secrets, key material, raw envelopes, and
+local paths. The previous Streamlit interface remains available through
+`adaptive-v2x-ui` as a temporary fallback.
 
 ## VeReMi support
 
@@ -98,6 +131,9 @@ src/adaptive_v2x_security/
   simulation/               ECUs, V2X channel and central workload simulation
   updates/                  Signed manifests, secure-boot and A/B OTA simulation
   experiments/              Audit, training, demo and benchmark runners
+  api/                      FastAPI contracts, durable jobs, and console launcher
+  ui/                       Shared UI services and legacy Streamlit fallback
+frontend/                   React/TypeScript monitoring console
 tests/                      Security, ML, policy, simulation and update tests
 ```
 
